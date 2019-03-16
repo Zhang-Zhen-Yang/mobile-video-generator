@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas">
+
+
+    </canvas>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script>
+        var c = createjs;
+        // 舞台
+        var stage = new c.Stage('canvas');
+
+        // bitmap 对象
+        var bitmap = new c.Bitmap('http://imgs.aixifan.com/content/2019_03_11/1552305033394.JPG?imageView2/1/w/200/h/110');
+
+        // rect 图形
+        var rect = new c.Shape();
+        rect.graphics.f('red').drawRect(0,0,100,100);
+        
+        // 添加到舞台
+        stage.addChild(bitmap);
+        stage.addChild(rect);
+
+        // 时间轴
+        let timeline = new c.Timeline([], 'g', {loop: true});
+
+        // 补间 （拿到bitmap对象）
+        let tween = c.Tween.get(bitmap);
+        // 设定缓动
+        tween.to({x: 200, y: 200}, 1000, c.Ease.linear);
+        // 添加到时间轴
+        timeline.addTween(tween);
+
+        // 24帧
+        c.Ticker.setFPS(24);
+        c.Ticker.addEventListener('tick', stage);
+    
+    </script>
+</body>
+</html>

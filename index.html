@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>video-vux</title>
+  </head>
+  <body>
+    <div id="app-box"></div>
+    <script>
+      window.navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
+      // window.romote='./';
+      window.remote='http://192.168.1.134:8090/wonbaoWeb/';
+      // 图片目录地址
+      window.assets = '/assets/';
+      // 音频目录地址
+      window.audioAssets = 'http://localhost:8081/audio-assets/';
+      window.asm = 'http://localhost:8081/script/ffmpeg_asm.js';
+      window.user = {
+        id: 105227988,
+        name: '海洋数码商城',
+        appkey: '12020783'
+      }
+    </script>
+    <!--<script src="./script/vconsole.min.js"></script>-->
+    <script src="./script/createjs-2015.11.26.min.js"></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,30 @@
+// 显示
+this.$vux.toast.show({
+    text: '您选择的不是图片文件！'
+})
+
+// toast
+this.$vux.toast.text('hello world', 'middle');
+
+// 加载中
+Vue.$vux.loading.show({
+    text: '合成视频中···'
+});
+
+
+
+<block-slice dir="vertical" :staticIndex="0" :staticValue="'46px'">
+</block-slice>
+
+
+<popup-picker
+    :title="title1"
+    :data="list1" 
+    v-model="value1"
+    @on-show="onShow"
+    @on-hide="onHide"
+    @on-change="onChange"
+    :placeholder="$t('please select')"
+></popup-picker>
+
+

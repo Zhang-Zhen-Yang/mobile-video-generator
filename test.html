@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="textarea" cols="30" rows="10" placeholder="sdfsdfdf &#10;ddddd" value="" ></textarea>
+
+
+    <label ref="label" id="ll" for="llll">
+    <p>
+        ddddd
+    </p>
+    </label>
+    <input id="llll" type="file" name="file" />
+    
+
+    <label class="choseImglabel"> 
+            <p>
+                ddddd
+            </p>
+        
+            <input type="file" name="file" />
+        </label>
+
+
+
+<hr>
+    <label class="choseImglabel"> 
+        <strong class="choseImgTitle">封面</strong>
+        <p class="choseNotice">小图片建议尺寸：200像素 * 200像素</p>
+        <div class="uploadType">
+        <a class="btn_upload">从图片库选择
+        <input type="file" id="camera" accept="image/*"/></a>
+        <span id="saveBtn" class="saveBtn"><button type="button" onclick="uploadImg()">保存图片</button></span>
+        </div> 
+    </label>
+
+    <script>
+        setTimeout(function(){
+            var ll = document.getElementById('ll');
+            ll.click();
+        }, 1000)
+    </script>
+    <script>
+        var textarea = document.getElementById('textarea');
+        textarea.placeholder = 'apple\nbanana'
+    </script>
+</body>
+</html>
